@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "安装vsftpd"
 git="https://gitee.com/focusbe/installsh/raw/master/vsftpd"
 echo "安装vsftpd"
 yum install vsftpd -y
