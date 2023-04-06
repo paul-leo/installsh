@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "安装vsftpd"
 git="https://gitee.com/focusbe/installsh/raw/master/vsftpd/configs"
 echo "安装vsftpd"
 yum install vsftpd -y
@@ -15,7 +14,8 @@ yum install db4 db4-utils -y
 read -p "请输入用户名:" username
 read -p "请输入密码:" password
 touch /etc/vsftpd/vuser_passwd.txt
-echo "${username}\n${password}" >> /etc/vsftpd/vuser_passwd.txt
+echo "${username}
+${password}" >> /etc/vsftpd/vuser_passwd.txt
 db_load -T -t hash -f /etc/vsftpd/vuser_passwd.txt /etc/vsftpd/vuser_passwd.db
 mv /etc/pam.d/vsftpd /etc/pam.d/vsftpd.bak
 wget "${git}/vsftpd.pam" -O "/etc/pam.d/vsftpd"
