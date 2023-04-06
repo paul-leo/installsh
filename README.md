@@ -1,1 +1,1 @@
-bash <(curl -L -s https://gitee.com/focusbe/installsh/raw/master/vsftpd/install.sh)
+bash <(curl -L -s https://raw.githubusercontent.com/pengzai-dev/installsh/master/vsftpd/install.sh)
