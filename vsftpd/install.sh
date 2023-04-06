@@ -1,5 +1,5 @@
 #!/bin/bash
-git="https://gitee.com/focusbe/installsh/raw/master/vsftpd/configs"
+git="https://raw.githubusercontent.com/pengzai-dev/installsh/master/vsftpd/configs"
 echo "安装vsftpd"
 yum install vsftpd -y
 echo "安装完成"
