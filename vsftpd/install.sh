@@ -31,7 +31,7 @@ anon_upload_enable=YES
 anon_mkdir_write_enable=YES
 anon_other_write_enable=YES
 " >> /etc/vsftpd/vuser_conf/${username}
-
+chown -R ftp:ftp /var/ftp
 # 开启setsebool
 setsebool -P allow_ftpd_anon_write=1
 setsebool -P tftp_home_dir=1
