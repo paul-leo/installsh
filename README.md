@@ -1,0 +1,1 @@
+bash <(curl -L -s https://gitee.com/focusbe/installsh/blob/master/vsftpd/install.sh)
