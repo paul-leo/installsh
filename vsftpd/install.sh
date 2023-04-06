@@ -42,11 +42,13 @@ setsebool -P allow_ftpd_full_access=1
 firewall-cmd --permanent --zone=public --add-port=21/tcp
 firewall-cmd --permanent --zone=public --add-port=20/tcp
 firewall-cmd --permanent --zone=public --add-port=40000-40100/tcp
+firewall-cmd --reload
 
 # 设置防火墙iptables
 iptables -I INPUT -p tcp --dport 21 -j ACCEPT
 iptables -I INPUT -p tcp --dport 20 -j ACCEPT
 iptables -I INPUT -p tcp --dport 40000:40100 -j ACCEPT
+service iptables save
 
 # 重启vsftpd
 systemctl restart vsftpd
